@@ -9,21 +9,11 @@ declare(strict_types=1);
  * @contact  group@hyperf.io
  * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
  */
+
 namespace App\Controller;
 
-use Hyperf\Di\Annotation\Inject;
-use Hyperf\HttpServer\Contract\RequestInterface;
-use Hyperf\HttpServer\Contract\ResponseInterface;
-use Psr\Container\ContainerInterface;
+use AresInspired\Framework\BaseController;
 
-abstract class AbstractController
+abstract class AbstractController extends BaseController
 {
-    #[Inject]
-    protected ContainerInterface $container;
-
-    #[Inject]
-    protected RequestInterface $request;
-
-    #[Inject]
-    protected ResponseInterface $response;
 }
